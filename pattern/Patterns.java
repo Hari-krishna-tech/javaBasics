@@ -311,5 +311,56 @@ public class Patterns {
         }
        System.out.println();
     }
+    /* 
+     E 
+     D E 
+     C D E 
+     B C D E 
+     A B C D E 
+     */
+    for(int i = 0; i < 5; i++) {
+        for(int j = 0; j <= i ; j++) {
+            char alphabet = Character.toChars(70-(j+1))[0];
+            System.out.print(alphabet);
+        }
+        System.out.println();
+    }
+
+    /*
+     **********
+     ****  ****
+     ***    ***
+     **      **
+     *        *
+     *        *
+     **      **
+     ***    ***
+     ****  ****
+     **********
+     */
+    int lower = 5;
+    int upper = 6;
+    for(int i = 0; i< 10; i++) {
+        
+        for(int j= 1; j<= 10; j++) {
+            
+           
+                if(lower <=j && upper >= j) {
+                    if(i!=0) System.out.print(" ");
+                    else System.out.print("*");
+                } else {
+                    System.out.print("*");
+                }
+            
+        }
+        if(i > 0 && i<4) {
+            lower--;
+            upper++;
+        }else if(i>4) {
+            lower++;
+            upper--;
+        }
+        System.out.println();
+    }
     }
 }
